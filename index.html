@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A private utility for copying and verifying the owner's Dropbox files in Google Drive.">
+  <meta name="referrer" content="no-referrer">
+  <title>Personal Drive Migration</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
+    body { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem; }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem; }
+    h2 { margin-top: 2rem; font-size: 1.25rem; }
+    a { color: #1769aa; text-underline-offset: .18em; }
+    nav, footer { margin-top: 2rem; }
+    footer { border-top: 1px solid #8886; padding-top: 1rem; font-size: .9rem; }
+    @media (prefers-color-scheme: dark) { a { color: #8acbff; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Personal Drive Migration</h1>
+    <p>A private utility that uses <a href="https://rclone.org/">rclone</a> to copy
+      the owner's Dropbox files into the owner's Google Drive and verify the copies.</p>
+    <p>The migration runs on an owner-controlled server. It inventories files,
+      copies their folder structure and supported timestamps, preserves earlier
+      migrated versions when replacements are needed, and checks file contents.
+      Dropbox originals are not modified or deleted by the migration.</p>
+
+    <h2>Google Drive access</h2>
+    <p>The app requests permission to view and manage Drive files so it can continue
+      working with existing migration files and verify their contents. This Google
+      permission covers the account's Drive files; the migration is configured to
+      write only within its dedicated destination and version folders.</p>
+
+    <h2>Private operation</h2>
+    <p>This informational website offers no public signups, uploads, file browsing,
+      or file sharing. It does not receive migration files or OAuth credentials.
+      Credentials, inventories, and detailed reports are kept in the owner's
+      private migration environment.</p>
+
+    <h2 id="terms">Terms of use</h2>
+    <p>This utility is for the account owner's personal use with accounts and files
+      they are authorized to access. It is not offered as a public migration service.
+      The owner controls the migration and may stop it or revoke its access at any time.</p>
+
+    <nav aria-label="Information">
+      <a href="privacy.html">Privacy policy</a>
+    </nav>
+  </main>
+  <footer>Personal Drive Migration &middot; Independent personal utility</footer>
+</body>
+</html>
